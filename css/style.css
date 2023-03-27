@@ -24,6 +24,7 @@ ul{
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 /* Layout */
@@ -45,7 +46,8 @@ a{
     background-color: steelblue;
     grid-row: 1 / -1;
     display: grid;
-    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-template-rows: repeat(3, min-content);
+    color: white;
 }
 
 .main{
@@ -62,6 +64,11 @@ a{
 .announcements,
 .trending{
     padding: 15px;
+}
+
+.sidebar > ul{
+    display: grid;
+    gap: 10px;
 }
 
 .search{
@@ -120,10 +127,27 @@ a{
 
 .announcements{
     background-color: #ddd;
+    display: grid;
+    gap: 10px;
+}
+
+.announcement{
+    display: grid;
+    gap: 10px;
+}
+
+.announcement:not(:first-child){
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+.announcement:not(:last-child){
+    padding-bottom: 10px;
 }
 
 .trending{
     background-color: #ddd;
+    display: grid;
 }
 
 .announcements,
