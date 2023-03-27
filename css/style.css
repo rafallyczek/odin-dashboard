@@ -66,6 +66,7 @@ input{
     padding: .5rem 1rem;
     border: none;
     border-radius: 1rem;
+    min-width: 40%;
 }
 
 input::placeholder{
