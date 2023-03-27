@@ -8,9 +8,11 @@
 :root{
     --clr-primary: hsl(207, 44%, 49%);
     --clr-primary-light: hsl(214, 32%, 91%);
+    --clr-primary-dark: hsl(207, 44%, 40%);
 
     --clr-light: hsl(0, 0%, 98%);
     --clr-semi-light: hsl(0, 0%, 80%);
+    --clr-dark: hsl(0, 0%, 39%);
 }
 
 body, 
@@ -39,6 +41,35 @@ a{
 
 button{
     cursor: pointer;
+    color: var(--clr-light);
+    background-color: var(--clr-primary);
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: var(--clr-primary-dark);
+}
+
+.buttons > button{
+    width: 5rem;
+}
+
+.project-buttons > button{
+    width: 3rem;
+}
+
+input{
+    background-color: var(--clr-primary-light);
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input::placeholder{
+    color: var(--clr-dark);
 }
 
 /* Layout */
@@ -60,7 +91,6 @@ button{
     grid-row: 1 / -1;
     display: grid;
     grid-template-rows: repeat(3, min-content);
-    color: white;
     z-index: 10;
 }
 
@@ -140,9 +170,14 @@ button{
 }
 
 .project{
-    background-color: #ddd;
     display: grid;
     grid-template-rows: 1fr min-content;
+}
+
+.project-info{
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 10px;
 }
 
 .project-buttons{
@@ -150,7 +185,6 @@ button{
 }
 
 .announcements{
-    background-color: #ddd;
     display: grid;
     gap: 10px;
 }
@@ -161,8 +195,8 @@ button{
 }
 
 .announcement:not(:first-child){
-    border-top: 1px solid black;
-    padding-top: 10px;
+    border-top: 1px solid var(--clr-dark);
+    padding-top: 15px;
 }
 
 .announcement:not(:last-child){
@@ -170,8 +204,9 @@ button{
 }
 
 .trending{
-    background-color: #ddd;
     display: grid;
+    grid-auto-rows: min-content;
+    gap: 10px;
 }
 
 .announcements,
@@ -186,6 +221,11 @@ button{
     grid-template-columns: min-content 1fr;
 }
 
+.post-description{
+    display: grid;
+    gap: 5px;
+}
+
 /* Utility classes */
 
 .bgc-primary{
@@ -198,6 +238,14 @@ button{
 
 .bgc-light{
     background-color: var(--clr-light);
+}
+
+.text-clr-light{
+    color: var(--clr-light);
+}
+
+.text-clr-dark{
+    color: var(--clr-dark);
 }
 
 .box-shadow{
