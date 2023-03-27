@@ -196,7 +196,7 @@ input::placeholder{
 }
 
 .announcement:not(:first-child){
-    border-top: 1px solid var(--clr-dark);
+    border-top: 1px solid var(--clr-semi-light);
     padding-top: 15px;
 }
 
