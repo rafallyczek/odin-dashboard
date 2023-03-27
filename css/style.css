@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
-body{
+body, html{
+    height: 100%;
     margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+    height: 100%;
+}
+
+.header{
+    
+}
+
+.sidebar{
+    grid-row: 1 / -1;
+}
+
+.main{
+    
 }
