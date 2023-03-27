@@ -52,7 +52,7 @@ a{
     background-color: olive;
     display: grid;
     grid-template: repeat(2, 1fr) / 3fr 1fr;
-    gap: 10px;
+    gap: 20px 15px;
 }
 
 .header,
@@ -61,7 +61,7 @@ a{
 .project,
 .announcements,
 .trending{
-    padding: 10px;
+    padding: 15px;
 }
 
 .search{
@@ -104,7 +104,7 @@ a{
 .projects{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 10px;
+    gap: 20px;
 }
 
 .project{
@@ -123,6 +123,12 @@ a{
 
 .trending{
     background-color: #ddd;
+}
+
+.announcements,
+.trending,
+.project{
+    border-radius: 5px;
 }
 
 .trending-post{
