@@ -15,6 +15,12 @@
     --clr-light: hsl(0, 0%, 98%);
     --clr-semi-light: hsl(0, 0%, 80%);
     --clr-dark: hsl(0, 0%, 39%);
+
+    --fs-small: .8rem;
+    --fs-medium: 1rem;
+    --fs-large: 1.5rem;
+
+    --fw-bold: 600;
 }
 
 body, 
@@ -260,4 +266,28 @@ input::placeholder{
 
 .box-shadow{
     box-shadow: 2px 2px .2rem var(--clr-semi-light);
+}
+
+.img-small{
+    width: 32px;
+}
+
+.img-medium{
+    width: 64px;
+}
+
+.fs-small{
+    font-size: var(--fs-small);
+}
+
+.fs-medium{
+    font-size: var(--fs-medium);
+}
+
+.fs-large{
+    font-size: var(--fs-large);
+}
+
+.fw-bold{
+    font-weight: var(--fw-bold);
 }
