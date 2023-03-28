@@ -75,15 +75,6 @@ a{
     gap: 20px 15px;
 }
 
-.header,
-.sidebar,
-.main,
-.project,
-.announcements,
-.trending{
-    padding: 15px;
-}
-
 .sidebar > ul{
     display: grid;
     gap: 10px;
@@ -138,6 +129,10 @@ a{
     grid-row: 1 / -1;
 }
 
+.trending-wrapper{
+    align-items: start;
+}
+
 .projects{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -164,7 +159,6 @@ a{
 .announcements{
     display: grid;
     gap: 10px;
-    height: min-content;
 }
 
 .announcement{
@@ -172,25 +166,9 @@ a{
     gap: 10px;
 }
 
-.announcement:not(:first-child){
-    border-top: 1px solid var(--clr-semi-light);
-    padding-top: 15px;
-}
-
-.announcement:not(:last-child){
-    padding-bottom: 10px;
-}
-
 .trending{
     display: grid;
-    height: min-content;
     gap: 10px;
-}
-
-.announcements,
-.trending,
-.project{
-    border-radius: 5px;
 }
 
 .trending-post{
@@ -202,6 +180,32 @@ a{
 .post-description{
     display: grid;
     gap: 5px;
+}
+
+/* Components */
+
+.header,
+.sidebar,
+.main,
+.project,
+.announcements,
+.trending{
+    padding: 15px;
+}
+
+.announcements,
+.trending,
+.project{
+    border-radius: 5px;
+}
+
+.announcement:not(:first-child){
+    border-top: 1px solid var(--clr-semi-light);
+    padding-top: 15px;
+}
+
+.announcement:not(:last-child){
+    padding-bottom: 10px;
 }
 
 /* Buttons */
