@@ -10,6 +10,8 @@
     --clr-primary-light: hsl(214, 32%, 91%);
     --clr-primary-dark: hsl(207, 44%, 40%);
 
+    --clr-accent: hsl(39, 78%, 51%);
+
     --clr-light: hsl(0, 0%, 98%);
     --clr-semi-light: hsl(0, 0%, 80%);
     --clr-dark: hsl(0, 0%, 39%);
@@ -39,40 +41,6 @@ a{
     color: inherit;
 }
 
-button{
-    cursor: pointer;
-    color: var(--clr-light);
-    background-color: var(--clr-primary);
-    padding: .5rem 1rem;
-    border: none;
-    border-radius: 1rem;
-    font-weight: bold;
-}
-
-button:hover{
-    background-color: var(--clr-primary-dark);
-}
-
-.buttons > button{
-    width: 5rem;
-}
-
-.project-buttons > button{
-    width: 3rem;
-}
-
-input{
-    background-color: var(--clr-primary-light);
-    padding: .5rem 1rem;
-    border: none;
-    border-radius: 1rem;
-    min-width: 40%;
-}
-
-input::placeholder{
-    color: var(--clr-dark);
-}
-
 /* Layout */
 
 .container{
@@ -97,7 +65,7 @@ input::placeholder{
 
 .main{
     display: grid;
-    grid-template: repeat(2, 1fr) / 3fr 1fr;
+    grid-template: min-content 1fr / 1fr 300px;
     gap: 20px 15px;
 }
 
@@ -166,13 +134,15 @@ input::placeholder{
 
 .projects{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 300px;
     gap: 20px;
 }
 
 .project{
     display: grid;
     grid-template-rows: 1fr min-content;
+    border-left: 10px solid var(--clr-accent);
 }
 
 .project-info{
@@ -188,6 +158,7 @@ input::placeholder{
 .announcements{
     display: grid;
     gap: 10px;
+    height: min-content;
 }
 
 .announcement{
@@ -206,7 +177,7 @@ input::placeholder{
 
 .trending{
     display: grid;
-    grid-auto-rows: min-content;
+    height: min-content;
     gap: 10px;
 }
 
@@ -225,6 +196,44 @@ input::placeholder{
 .post-description{
     display: grid;
     gap: 5px;
+}
+
+/* Buttons */
+
+button{
+    cursor: pointer;
+    color: var(--clr-light);
+    background-color: var(--clr-primary);
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: var(--clr-primary-dark);
+}
+
+.buttons > button{
+    width: 5rem;
+}
+
+.project-buttons > button{
+    width: 3rem;
+}
+
+/* Input */
+
+input{
+    background-color: var(--clr-primary-light);
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    min-width: 40%;
+}
+
+input::placeholder{
+    color: var(--clr-dark);
 }
 
 /* Utility classes */
