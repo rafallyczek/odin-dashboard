@@ -19,6 +19,7 @@
     --fs-small: .8rem;
     --fs-medium: 1rem;
     --fs-large: 1.5rem;
+    --fs-x-large: 2rem;
 
     --fw-bold: 600;
 }
@@ -290,6 +291,10 @@ input::placeholder{
 
 .fs-large{
     font-size: var(--fs-large);
+}
+
+.fs-x-large{
+    font-size: var(--fs-x-large);
 }
 
 .fw-bold{
